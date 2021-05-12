@@ -1,0 +1,15 @@
+http:
+  protocol: "http"
+  host: "localhost"
+  port: "8001"
+  readTimeout: 10 # in seconds
+  writeTimeout: 10 # in seconds
+
+mysql:
+  username: "sammy"
+  host: "127.0.0.1"
+  port: "3306"
+  dbname: "jph"
+
+oauth:
+  state: "random11111111111"

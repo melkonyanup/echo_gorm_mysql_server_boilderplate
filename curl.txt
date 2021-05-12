@@ -1,0 +1,32 @@
+// signup
+curl -i -X POST http://localhost:8001/api/v1/sign-up -H 'Content-Type: application/json' -d '{"email": "bro@ffffff.com", "password": "123456", "first_name": "bro", "last_name": "jjjj"}'
+
+// login
+curl -i -X POST http://localhost:8001/api/v1/sign-in -H 'Content-Type: application/json' -d '{"email": "bro@ffffff.com", "password": "123456"}'
+
+// profile
+curl -i -X GET http://localhost:8001/api/v1/user/profile -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc"
+
+
+
+// POSTS API
+// get all posts xml
+curl -i -X GET http://localhost:8001/api/v1/post?type=xml -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc"
+
+// get all posts json
+curl -i -X GET http://localhost:8001/api/v1/post?type=json -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc"
+
+// get post xml
+curl -i -X GET http://localhost:8001/api/v1/post/1?type=xml -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc"
+
+// get post json
+curl -i -X GET http://localhost:8001/api/v1/post/1?type=json -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc"
+
+// create post
+curl -i -X POST http://localhost:8001/api/v1/post -H 'Content-Type: application/json' -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc" -d '{"title": "ggggg", "body": "vvvvvvv"}'
+
+// update post
+curl -i -X PUT http://localhost:8001/api/v1/post/1 -H 'Content-Type: application/json' -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc" -d '{"title": "hhhhh", "body": "hhhhh"}'
+
+// delete post
+curl -i -X DELETE http://localhost:8001/api/v1/post/1 -b "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjMsIkVtYWlsIjoiYnJvQGZmZmZmZi5jb20iLCJleHAiOjE2MjA1NTAzMTAsImlzcyI6IkF1dGhTZXJ2aWNlIn0.wJD2wOCwnqIGZTr_FSs7M1GZj3RWQsMM1FNBK3XARKc"
